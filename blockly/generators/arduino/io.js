@@ -166,4 +166,17 @@ Blockly.Arduino['io_pulsetimeout'] = function(block) {
   var code = 'pulseIn(' + pin + ', ' + type + ', ' + timeout + ')';
 
   return [code, Blockly.Arduino.ORDER_ATOMIC];
-}; 
+};
+
+
+/**
+ * Function for reading proximity
+ * Arduino code: setup { pinMode(X, INPUT); }
+ *               loop  { digitalRead(X)     }
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {array} Completed code with order of operation.
+ */
+Blockly.Arduino['io_proximity'] = function(block) {
+  var code = '13';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};

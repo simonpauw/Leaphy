@@ -260,3 +260,23 @@ Blockly.Blocks['io_pulsetimeout'] = {
     return Blockly.Types.NUMBER;
   }
 };
+
+
+Blockly.Blocks['io_proximity'] = {
+  /**
+   * Block for reading the proximity sensor.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl('http://example.org/proximity');
+    this.setColour(Blockly.Blocks.io.HUE);
+    this.appendDummyInput()
+        .appendField("Proximity Sensor BB");
+    this.setOutput(true, Blockly.Types.BOOLEAN.output);
+    this.setTooltip(Blockly.Msg.ARD_DIGITALREAD_TIP);
+  },
+  /** @return {!string} The type of return value for the block, an integer. */
+  getBlockType: function() {
+    return Blockly.Types.NUMBER;
+  }
+};
